@@ -1,98 +1,117 @@
 .footer {
+  display: flex;
+  justify-content: space-around;
+
+  min-height: 280px;
+  max-width: 1940px;
+  width: 100%;
+
+  background: #ffffff;
+  box-shadow: 0px -11px 40px rgba(39, 95, 158, 0.05);
+
+  .footer__wrapper {
     display: flex;
-    justify-content: space-around;
-    height: 250px;
+    flex-direction: column;
+
     max-width: 1940px;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0px -11px 40px rgba(39, 95, 158, 0.05);
-    .footer__wrapper {
-      display: flex;
-      flex-direction: column;
-      max-width: 1940px;
-      width: 65%;
-      margin-left: 80px;
-      margin-top: 38px;
+    width: 65%;
+
+    margin-left: 80px;
+    margin-top: 38px;
+  }
+  .footer__info {
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 12px;
+
+    color: #8291a3;
+
+    margin-top: 44px;
+    margin-left: 28px;
+
+    .footer__title {
+      font-family: "Inter-Medium";
+
+      margin-top: 10px;
+      margin-bottom: 60px;
     }
-    .footer__info {
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
+    .footer__address {
+      font-family: "Inter-Regular";
+      font-size: 11px;
+
       color: #8291a3;
-      margin-top: 44px;
-      margin-left: 28px;
-      .footer__title {
-        font-weight: 500;
-        margin-top: 10px;
-        margin-bottom: 60px;
-      }
-      .footer__address {
-        font-family: "Inter";
-        font-style: normal;
+
+      .footer__send {
+        font-family: "Inter-Regular";
         font-size: 11px;
+
         color: #8291a3;
-        .footer__send {
-          font-family: "Inter";
-          font-size: 11px;
-          color: #8291a3;
-        }
-      }
-    }
-    .footer__navigation {
-      display: flex;
-      .footer__list {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        color: #8291a3;
-        .footer__item {
-          padding: 8px;
-        }
-        .footer__item--black {
-          font-weight: 700;
-          color: #1e2123;
-        }
-        .footer__item--padding {
-          padding-top: 24px;
-          padding-bottom: 24px;
-        }
-      }
-      .footer__list:nth-child(1) {
-        padding-right: 36px;
-      }
-      .footer__list:nth-child(2) {
-        padding-right: 55px;
-      }
-      .footer__list:nth-child(3) {
-        padding-top: 34px;
-        padding-right: 116px;
-      }
-    }
-    .footer__block {
-      display: flex;
-      justify-content: space-between;
-      max-width: 950px;
-      margin-top: 40px;
-      margin-left: 6px;
-      .footer__net {
-        @extend %flex;
-        font-family: "Inter", sans-serif;
-        max-width: 260px;
-        font-size: 14px;
-      }
-      .footer__cart {
-        @extend %flex;
-        max-width: 380px;
-        margin-right: 40px;
       }
     }
   }
-  
-  %flex {
+  .footer__navigation {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+
+    .footer__list {
+      font-family: "Inter-Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+
+      color: #8291a3;
+
+      .footer__item {
+        padding: 8px;
+      }
+      .footer__item--black-font {
+        font-family: "Inter-Bold";
+        color: #1e2123;
+      }
+      .footer__item--padding {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+    }
+    .footer__list:nth-child(1) {
+      padding-right: 36px;
+    }
+    .footer__list:nth-child(2) {
+      padding-right: 55px;
+    }
+    .footer__list:nth-child(3) {
+      padding-top: 34px;
+      padding-right: 116px;
+    }
   }
+  .footer__block {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 950px;
+
+    margin-top: 40px;
+    margin-left: 6px;
+    .footer__net {
+      @extend %flex;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+
+      max-width: 260px;
+    }
+    .footer__net-font {
+      font-family: "Inter-Medium";
+    }
+    .footer__cart {
+      @extend %flex;
+      max-width: 380px;
+      margin-right: 40px;
+    }
+  }
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}

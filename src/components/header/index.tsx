@@ -47,7 +47,7 @@ export const Header = () => {
           <ul className="navbar__list navbar__list--size">
             <li className="navbar__item">
               <div>
-                <a className="navbar__text" href="/">
+                <a className="navbar__text navbar__text--font" href="/">
                   Закладки
                 </a>
                 <span className="navbar__text--margin-heart">
@@ -56,7 +56,9 @@ export const Header = () => {
               </div>
             </li>
             <li className="navbar__item">
-              <a className="navbar__text navbar__text--violet" href="/">
+              <a
+                className="navbar__text navbar__text--font navbar__text--violet"
+                href="/">
                 Вход и регистрация
               </a>
             </li>

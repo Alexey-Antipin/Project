@@ -39,18 +39,18 @@ export const Footer = () => {
       <div className="footer__wrapper">
         <nav className="footer__navigation">
           <ul className="footer__list">
-            <li className="footer__item footer__item--black">
+            <li className="footer__item footer__item--black-font">
               Коттеджи и усадьбы
             </li>
-            <li className="footer__item footer__item--black footer__item--padding">
+            <li className="footer__item footer__item--black-font footer__item--padding">
               Бани и сауны
             </li>
-            <li className="footer__item footer__item--black">
+            <li className="footer__item footer__item--black-font">
               Авто на прокат
             </li>
           </ul>
           <ul className="footer__list">
-            <li className="footer__item footer__item--black">Квартиры</li>
+            <li className="footer__item footer__item--black-font">Квартиры</li>
             <li className="footer__item">Квартиры в Минске</li>
             <li className="footer__item">Квартиры в Гомеле</li>
             <li className="footer__item">Квартиры в Бресте</li>
@@ -70,7 +70,7 @@ export const Footer = () => {
 
         <div className="footer__block">
           <ul className="footer__net">
-            <h3>Мы в соцсетях</h3>
+            <h3 className="footer__net-font">Мы в соцсетях</h3>
             <li>
               <a href="/">
                 <Sprite id="instagram" />
