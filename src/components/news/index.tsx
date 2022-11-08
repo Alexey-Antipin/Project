@@ -21,7 +21,8 @@ export const News: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
 
   useEffect(() => {
-    getData();
+    combineData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getData = async () => {
@@ -30,7 +31,6 @@ export const News: React.FC = () => {
     );
 
     setArticle(data);
-    getArticles();
   };
 
   const getArticles = async () => {
@@ -40,6 +40,11 @@ export const News: React.FC = () => {
 
     let filterData = data.filter((el) => el.id !== id);
     setArticles(filterData);
+  };
+
+  const combineData = async () => {
+    await getData();
+    await getArticles();
   };
 
   return (
@@ -54,42 +59,43 @@ export const News: React.FC = () => {
             <div className="new__round"></div>
             <span className="news__text">{article?.title}</span>
           </div>
+
           <h1 className="news__title">{article?.title}</h1>
-          <div className="news__network">
-            <time className="news__date">{article?.time}</time>
-            <nav className="news__nav">
-              <span className="news__label">Поделиться</span>
-              <ul className="news__list">
-                <li className="news__item">
-                  <a href="/">
-                    <Sprite id="vk_violet" />
-                  </a>
-                </li>
-                <li className="news__item">
-                  <a href="/">
-                    <Sprite id="facebook_violet" />
-                  </a>
-                </li>
-                <li className="news__item">
-                  <a href="/">
-                    <Sprite id="viber_violet" />
-                  </a>
-                </li>
-                <li className="news__item">
-                  <a href="/">
-                    <Sprite id="telegram_violet" />
-                  </a>
-                </li>
-                <li className="news__item">
-                  <a href="/">
-                    <Sprite id="tel_violet" />
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
         </div>
-        <div className="news__background"></div>
+
+        <div className="news__network">
+          <time className="news__date">{article?.time}</time>
+          <nav className="news__nav">
+            <span className="news__label">Поделиться</span>
+            <ul className="news__list">
+              <li className="news__item">
+                <a href="/">
+                  <Sprite id="vk_violet" />
+                </a>
+              </li>
+              <li className="news__item">
+                <a href="/">
+                  <Sprite id="facebook_violet" />
+                </a>
+              </li>
+              <li className="news__item">
+                <a href="/">
+                  <Sprite id="viber_violet" />
+                </a>
+              </li>
+              <li className="news__item">
+                <a href="/">
+                  <Sprite id="telegram_violet" />
+                </a>
+              </li>
+              <li className="news__item">
+                <a href="/">
+                  <Sprite id="tel_violet" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div className="news__main">
@@ -140,7 +146,6 @@ export const News: React.FC = () => {
             })}
           </ul>
         </div>
-        <div className="news__background"></div>
       </div>
     </div>
   );
