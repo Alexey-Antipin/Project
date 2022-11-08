@@ -1,0 +1,208 @@
+.news {
+  .news__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 280px;
+    max-width: 1940px;
+    position: relative;
+
+    margin: 0 auto;
+    background: linear-gradient(
+      90deg,
+      rgba(148, 175, 255, 0.1),
+      rgba(78, 100, 249, 0.1)
+    );
+    .news__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      margin-top: 60px;
+      margin-right: 40px;
+      margin-bottom: 30px;
+    }
+    .news__article-link {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+    }
+    .news__home {
+      margin-right: 7px;
+    }
+    .new__round {
+      display: inline-block;
+      height: 3px;
+      width: 3px;
+
+      border-radius: 50%;
+      background: #4e64f9;
+      margin: 3px 7px;
+    }
+    .news__text {
+      color: #686868;
+    }
+    .new__text--blue {
+      color: #4e64f9;
+    }
+    .news__title {
+      font-family: "Inter-Bold";
+      font-size: 30px;
+    }
+    .news__network {
+      display: flex;
+      justify-content: space-between;
+      max-width: 840px;
+      width: 100%;
+    }
+    .news__date {
+      font-family: "Inter-Medium";
+      font-size: 14px;
+
+      padding: 10px 16px;
+
+      background: rgba(102, 78, 249, 0.1);
+      border-radius: 18px;
+
+      color: #6e60c4;
+    }
+    .news__nav {
+      display: flex;
+      align-items: center;
+      .news__label {
+        font-family: "Inter-Regular";
+        font-size: 14px;
+      }
+      .news__list {
+        display: flex;
+        justify-content: space-between;
+
+        width: 240px;
+        margin-left: 15px;
+        .news__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          height: 34px;
+          width: 34px;
+
+          background: rgba(102, 78, 249, 0.1);
+          border-radius: 19px;
+        }
+      }
+    }
+  }
+  .news__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .news__block {
+      position: relative;
+
+      height: 564px;
+      width: 844px;
+      .news__point {
+        position: absolute;
+        top: 36px;
+        left: -100px;
+        height: 60px;
+        width: 60px;
+      }
+      .news__photo {
+        position: absolute;
+        top: -32px;
+        border-radius: 10px;
+      }
+    }
+    .news__text-block {
+      height: 540px;
+      width: 844px;
+
+      font-family: "Inter-Regular";
+      font-size: 16px;
+    }
+  }
+  .news__footer {
+    height: 738px;
+    max-width: 1940px;
+    position: relative;
+
+    background: linear-gradient(
+      90deg,
+      rgba(148, 175, 255, 0.1),
+      rgba(78, 100, 249, 0.1)
+    );
+    .news__wrapper {
+      width: 1300px;
+      margin: 0 auto;
+    }
+    .news__main-title {
+      font-family: "Inter-Bold";
+      font-size: 25px;
+
+      padding-top: 62px;
+      padding-bottom: 45px;
+      color: #1e2123;
+    }
+    .news__articles-list {
+      display: flex;
+      justify-content: center;
+      gap: 31px;
+    }
+    .news__element {
+      height: 500px;
+      background: #fffefe;
+      border-radius: 10px;
+    }
+    .news__image {
+      display: block;
+      height: 220px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .news__title {
+      font-family: "Inter-Bold";
+      font-size: 16px;
+      margin: 20px 28px;
+    }
+    .news__description {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+
+      color: #8291a3;
+      margin: 25px 26px;
+    }
+    .news__linier {
+      width: 90%;
+      margin: 0 auto;
+      border: 2px solid #f8f8f8;
+    }
+    .news__block-ready {
+      display: flex;
+      justify-content: space-between;
+      .news__date {
+        font-family: "Inter-Medium";
+        font-size: 14px;
+        padding: 12px 8px;
+
+        color: #8291a3;
+        background: #f8f8f8;
+        border-radius: 18px;
+        margin: 20px;
+      }
+      .news__link {
+        font-family: "Inter-Bold";
+        font-size: 14px;
+        padding: 10px 15px;
+
+        color: #664ef9;
+        background: rgba(102, 78, 249, 0.1);
+        border-radius: 17px;
+        margin: 20px;
+      }
+    }
+  }
+}
+
