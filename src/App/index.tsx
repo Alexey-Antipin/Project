@@ -1,11 +1,12 @@
-import { Footer, Header, News } from "../components/index";
+import { Footer, Header, News, NewsDetailed } from "../components/index";
 import "./index.scss";
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <News />
+      {/* <News /> */}
+      <NewsDetailed/>
       <Footer />
     </div>
   );
