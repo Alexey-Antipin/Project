@@ -1,13 +1,19 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { LinkNavigation } from "../../module/LinkNavigation";
-import { ListArticles } from "../../module/list";
 import points from "../../image/points.png";
 import { Sprite } from "../../svg";
-import { Article } from "../../ts";
-import axios from "axios";
 import "./index.scss";
 
 export const News: React.FC = () => {
+  interface Article {
+    id: number;
+    title: string;
+    time: string;
+    photo: string;
+    text: string[];
+    description: string;
+  }
+
   //id click, потом убрать.
   let id = 1;
 
@@ -21,16 +27,19 @@ export const News: React.FC = () => {
 
   const getData = async () => {
     let { data } = await axios.get<Article>(
-      `http://localhost:3001/articles/1`
+      `http://localhost:3001/articles/${id}`
     );
+
     setArticle(data);
   };
 
   const getArticles = async () => {
     let { data } = await axios.get<Article[]>(
-      `http://localhost:3001/articles?_start=${id}&_limit=3`
+      "http://localhost:3001/articles"
     );
-    setArticles(data);
+
+    let filterData = data.filter((el) => el.id !== id);
+    setArticles(filterData);
   };
 
   const combineData = async () => {
@@ -42,7 +51,16 @@ export const News: React.FC = () => {
     <div className="news">
       <div className="news__header">
         <div className="news__wrapper">
-          <LinkNavigation link={"Новости"} deeperLink={article?.title} />
+          <div className="news__article-link">
+            <span className="news__home">
+              <Sprite id="home" />
+            </span>
+            <span className="new__text--blue">Новости</span>
+            <div className="new__round"></div>
+            <span className="news__text">{article?.title}</span>
+          </div>
+
+          <h1 className="news__title">{article?.title}</h1>
         </div>
 
         <div className="news__network">
@@ -91,7 +109,7 @@ export const News: React.FC = () => {
         </div>
 
         <div className="news__text-block">
-          {article?.text?.map((item, index) => {
+          {article?.text.map((item, index) => {
             return (
               <div key={index}>
                 <p>{item}</p>
@@ -105,7 +123,28 @@ export const News: React.FC = () => {
       <div className="news__footer">
         <div className="news__wrapper">
           <h2 className="news__main-title">Читайте также</h2>
-          <ListArticles list={articles} />
+          <ul className="news__articles-list">
+            {articles.map((item, index) => {
+              return (
+                <li className="news__element" key={index}>
+                  <img
+                    className="news__image"
+                    src={item.photo}
+                    alt="home"
+                  />
+                  <h3 className="news__title">{item.title}</h3>
+                  <p className="news__description">{item.description}</p>
+                  <hr className="news__linier"></hr>
+                  <div className="news__block-ready">
+                    <time className="news__date">{item.time}</time>
+                    <a className="news__link" href={`./${item.id}`}>
+                      Читать
+                    </a>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </div>

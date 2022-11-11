@@ -1,77 +1,49 @@
-import { useState } from "react";
+import "./index.scss";
 import { Sprite } from "../../svg";
 import logo from "../../image/logo.png";
-import { MassiveLink } from "../../ts";
-import "./index.scss";
 
 export const Header = () => {
-  const link: MassiveLink[] = [
-    { id: 1, text: "Главная" },
-    { id: 2, text: "Новости" },
-    { id: 3, text: "Размещение и тарифы" },
-    { id: 4, text: "Объявления на карте" },
-    { id: 5, text: "Контакты" },
-  ];
-  const underList: MassiveLink[] = [
-    { id: 6, text: "Квартиры на сутки" },
-    { id: 7, text: "Коттеджи и усадьбы" },
-    { id: 8, text: "Бани и Сауны" },
-    { id: 9, text: "Авто напрокат" },
-  ];
-  const [activeId, setActiveId] = useState<number | string>(0);
-
   return (
     <>
       <div className="navbar">
         <nav className="navbar__menu">
           <ul className="navbar__list">
-            {link.map((el, index) => {
-              return (
-                <li
-                  className="navbar__item"
-                  onClick={() => setActiveId(el.id)}
-                  key={index}>
-                  {index === 3 ? (
-                    <div className="navbar__block--padding">
-                      <span className="navbar__text--margin-sign">
-                        <Sprite
-                          id="sign"
-                          colour={activeId === el.id ? "black" : "#8291a3"}
-                        />
-                      </span>
-                      <a
-                        className={
-                          activeId === el.id
-                            ? "navbar__text navbar__text--active"
-                            : "navbar__text"
-                        }
-                        href="/">
-                        {el.text}
-                      </a>
-                    </div>
-                  ) : (
-                    <a
-                      className={
-                        activeId === el.id
-                          ? "navbar__text navbar__text--active"
-                          : "navbar__text"
-                      }
-                      href="/">
-                      {el.text}
-                    </a>
-                  )}
-
-                  <span
-                    className={
-                      activeId === el.id
-                        ? "navbar__focus--active"
-                        : "navbar__focus"
-                    }></span>
-                </li>
-              );
-            })}
+            <li className="navbar__item">
+              <a className="navbar__text" href="/">
+                Главная
+              </a>
+              <span className="navbar__focus navbar__focus--hover"></span>
+            </li>
+            <li className="navbar__item">
+              <a className="navbar__text" href="/">
+                Новости
+              </a>
+              <span className="navbar__focus navbar__focus--hover"></span>
+            </li>
+            <li className="navbar__item">
+              <a className="navbar__text" href="/">
+                Размещение и тарифы
+              </a>
+              <span className="navbar__focus navbar__focus--hover"></span>
+            </li>
+            <li className="navbar__item">
+              <div className="navbar__block--padding">
+                <span className="navbar__text--margin-sign">
+                  <Sprite id="sign" />
+                </span>
+                <a className="navbar__text navbar__text--black" href="/">
+                  Объявления на карте
+                </a>
+              </div>
+              <span className="navbar__focus navbar__focus--hover"></span>
+            </li>
+            <li className="navbar__item">
+              <a className="navbar__text" href="/">
+                Контакты
+              </a>
+              <span className="navbar__focus navbar__focus--hover"></span>
+            </li>
           </ul>
-
           <ul className="navbar__list navbar__list--size">
             <li className="navbar__item">
               <div>
@@ -102,39 +74,40 @@ export const Header = () => {
 
           <nav className="navigation__menu">
             <ul className="navigation__list">
-              {underList.map((el, index) => {
-                return (
-                  <li
-                    className="navigation__item"
-                    key={index}
-                    onClick={() => setActiveId(el.id)}>
-                    {index === 0 ? (
-                      <div className="navigation__block--padding">
-                        <a className="navigation__link" href="/">
-                          {el.text}
-                        </a>
-                        <span className="navigation__sign--margin">
-                          <Sprite
-                            id="sign"
-                            colour="#FFD54F"
-                            width="12"
-                            height="15"
-                          />
-                        </span>
-                      </div>
-                    ) : (
-                      <a className="navigation__link" href="/">{el.text}</a>
-                    )}
-
-                    <span
-                      className={
-                        activeId === el.id
-                          ? "navigation__focus navigation__focus--active"
-                          : "navigation__focus"
-                      }></span>
-                  </li>
-                );
-              })}
+              <li className="navigation__item">
+                <div className="navigation__block--padding">
+                  <a className="navigation__link" href="/">
+                    Квартиры на сутки
+                  </a>
+                  <span className="navigation__sign--margin">
+                    <Sprite
+                      id="sign"
+                      colour="#FFD54F"
+                      width="12"
+                      height="15"
+                    />
+                  </span>
+                </div>
+                <span className="navigation__focus navigation__focus--hover"></span>
+              </li>
+              <li className="navigation__item">
+                <a className="navigation__link" href="/">
+                  Коттеджи и усадьбы
+                </a>
+                <span className="navigation__focus navigation__focus--hover"></span>
+              </li>
+              <li className="navigation__item">
+                <a className="navigation__link" href="/">
+                  Бани и Сауны
+                </a>
+                <span className="navigation__focus navigation__focus--hover"></span>
+              </li>
+              <li className="navigation__item">
+                <a className="navigation__link" href="/">
+                  Авто напрокат
+                </a>
+                <span className="navigation__focus navigation__focus--hover"></span>
+              </li>
             </ul>
           </nav>
 

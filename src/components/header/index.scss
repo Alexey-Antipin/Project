@@ -23,11 +23,11 @@
       align-items: center;
       flex-direction: column;
       .navbar__focus {
-        height: 3px;
+        @extend %animation;
       }
-      .navbar__focus--active {
-        @extend %focus
-      }
+    }
+    .navbar__item:hover .navbar__focus--hover {
+      width: 100%;
     }
     .navbar__block--padding {
       padding: 10px 0px;
@@ -43,11 +43,10 @@
     color: #8291a3;
     padding: 10px 0px;
   }
-
-  .navbar__text--font {
+  .navbar__text--font{
     font-family: "Inter-Medium";
   }
-  .navbar__text--active {
+  .navbar__text--black {
     color: #1e2123;
   }
   .navbar__text--violet {
@@ -112,10 +111,10 @@
           margin-left: 15px;
         }
         .navigation__focus {
-          height: 3px;
+          @extend %animation;
         }
-        .navigation__focus--active {
-          @extend %focus
+        .navigation__item:hover .navigation__focus--hover {
+          width: 100%;
         }
       }
     }
@@ -136,8 +135,8 @@
   }
 }
 
-%focus{
-  height: 3px;
-  background: #ffd54f;
-  width: 100%;
+%animation {
+  width: 0%;
+  border-bottom: 3px solid #ffd54f;
+  transition: all 0.5s;
 }

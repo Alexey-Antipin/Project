@@ -21,9 +21,34 @@
 
       margin-top: 60px;
       margin-right: 40px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
-    
+    .news__article-link {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+    }
+    .news__home {
+      margin-right: 7px;
+    }
+    .new__round {
+      display: inline-block;
+      height: 3px;
+      width: 3px;
+
+      border-radius: 50%;
+      background: #4e64f9;
+      margin: 3px 7px;
+    }
+    .news__text {
+      color: #686868;
+    }
+    .new__text--blue {
+      color: #4e64f9;
+    }
+    .news__title {
+      font-family: "Inter-Bold";
+      font-size: 30px;
+    }
     .news__network {
       display: flex;
       justify-content: space-between;
@@ -119,8 +144,65 @@
 
       padding-top: 62px;
       padding-bottom: 45px;
-      padding-left: 10px;
       color: #1e2123;
+    }
+    .news__articles-list {
+      display: flex;
+      justify-content: center;
+      gap: 31px;
+    }
+    .news__element {
+      height: 500px;
+      background: #fffefe;
+      border-radius: 10px;
+    }
+    .news__image {
+      display: block;
+      height: 220px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .news__title {
+      font-family: "Inter-Bold";
+      font-size: 16px;
+      margin: 20px 28px;
+    }
+    .news__description {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+
+      color: #8291a3;
+      margin: 25px 26px;
+    }
+    .news__linier {
+      width: 90%;
+      margin: 0 auto;
+      border: 2px solid #f8f8f8;
+    }
+    .news__block-ready {
+      display: flex;
+      justify-content: space-between;
+      .news__date {
+        font-family: "Inter-Medium";
+        font-size: 14px;
+        padding: 12px 8px;
+
+        color: #8291a3;
+        background: #f8f8f8;
+        border-radius: 18px;
+        margin: 20px;
+      }
+      .news__link {
+        font-family: "Inter-Bold";
+        font-size: 14px;
+        padding: 10px 15px;
+
+        color: #664ef9;
+        background: rgba(102, 78, 249, 0.1);
+        border-radius: 17px;
+        margin: 20px;
+      }
     }
   }
 }
+
