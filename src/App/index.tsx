@@ -1,4 +1,10 @@
-import { Footer, Header, News, NewsDetailed } from "../components/index";
+import {
+  Error,
+  Footer,
+  Header,
+  News,
+  NewsDetailed,
+} from "../components/index";
 import "./index.scss";
 
 export const App = () => {
@@ -6,7 +12,8 @@ export const App = () => {
     <div>
       <Header />
       {/* <News /> */}
-      <NewsDetailed/>
+      {/* <NewsDetailed/> */}
+      <Error />
       <Footer />
     </div>
   );
