@@ -11,14 +11,14 @@
     width: 9px;
   }
   .pagination__item {
-    font-family: "Inter-Regular";
+    font-family: "Inter-Regular",sans-serif;
     font-size: 18px;
     color: #686868;
     padding: 0px 7px;
     margin: 0px 8px;
   }
   .pagination__item--active {
-    font-family: "Inter-Bold";
+    font-family: "Inter-Bold",sans-serif;
     font-size: 18px;
 
     border-bottom: 2px solid #ffd54f;

@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 31px;
-  
+
   position: relative;
   z-index: 1;
 }
@@ -12,7 +12,7 @@
   width: 406px;
 
   background: #fffefe;
-  box-shadow: 0px 5px 15px 0px rgba(205, 205, 205, 0.5); 
+  box-shadow: 0px 5px 15px 0px rgba(205, 205, 205, 0.5);
   border-radius: 10px;
 }
 .list__image {
@@ -22,12 +22,12 @@
   border-radius: 10px;
 }
 .list__title {
-  font-family: "Inter-Bold";
+  font-family: "Inter-Bold", sans-serif;
   font-size: 16px;
   margin: 20px 20px;
 }
 .list__description {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", sans-serif;
   font-size: 14px;
 
   color: #8291a3;
@@ -42,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   .list__date {
-    font-family: "Inter-Medium";
+    font-family: "Inter-Medium", sans-serif;
     font-size: 14px;
     padding: 12px 8px;
 
@@ -52,7 +52,7 @@
     margin: 20px;
   }
   .list__link {
-    font-family: "Inter-Bold";
+    font-family: "Inter-Bold", sans-serif;
     font-size: 14px;
     padding: 10px 15px;
 

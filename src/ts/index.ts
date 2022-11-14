@@ -1,3 +1,15 @@
+type Head = {
+  id: number;
+  hook: string;
+  state: (value: string) => void;
+  title: string;
+  placeholder: string;
+  sprite: string;
+  class: string;
+  normal: string;
+  error: string;
+};
+
 type Article = {
   id: number;
   title: string;
@@ -27,6 +39,7 @@ type PaginationProps = {
 };
 
 export type {
+  Head,
   Article,
   MassiveLink,
   ListProps,
