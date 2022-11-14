@@ -1,0 +1,311 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  height: 688px;
+  max-width: 1940px;
+  width: 100%;
+
+  background-image: url("../../image/background.png"),
+    linear-gradient(#7e6af3, #6540cd);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 70px 80px;
+
+  .call {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .call__title {
+      font-family: "Inter-Bold";
+      font-size: 30px;
+      
+      height: 30px;
+      color: #ffffff;
+    }
+    .call__paragraph {
+      @extend %font-call;
+
+      height: 72px;
+      width: 515px;
+    }
+    .call__block {
+      display: flex;
+      gap:20px;
+      .call__block-icons {
+        display: flex;
+        flex-direction: column;
+        .call__icons {
+          @extend %icons;
+          margin-bottom: 11px;
+
+          height: 30px;
+          width: 30px;
+        }
+      }
+      .call__address {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 8px;
+
+        height: 153px;
+        width: 482px;
+
+        font-family: "Inter-SemiBold";
+        font-size: 18px;
+        line-height: 150%;
+
+        color: #ffffff;
+        .call__tel-block {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .call__tel {
+            font-family: "Inter-SemiBold";
+            font-size: 18px;
+            line-height: 150%;
+            color: #ffffff;
+          }
+          .call__icons {
+            @extend %icons;
+
+            height: 30px;
+            width: 30px;
+          }
+        }
+        .call__mail {
+          color: #ffffff;
+          text-decoration: underline 2px;
+          text-underline-position: under;
+        }
+        .call__time {
+          font-family: "Inter-Light";
+          font-size: 18px;
+        }
+      }
+    }
+    .call__info {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+      line-height: 150%;
+      color: #ffffff;
+
+      height: 42px;
+      width: 516px;
+    }
+    .warning {
+      display: flex;
+      align-items: center;
+      padding: 30px 25px;
+      gap: 20px;
+
+      height: 90px;
+      width: 515px;
+
+      background: rgba(80, 57, 189, 0.5);
+      border-radius: 10px;
+      .warning__text {
+        @extend %font-call;
+
+        height: 48px;
+        width: 405px;
+      }
+    }
+  }
+
+  .contacts__title {
+    margin-top: 40px;
+    @extend %font;
+    color: #686868;
+  }
+  .contacts__under-title {
+    @extend %font;
+    color: #686868;
+
+    padding: 15px 38px;
+    margin-right: auto;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 516px;
+    width: 625px;
+
+    background: #fffefe;
+    box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+    border-radius: 10px;
+    .contacts__flex {
+      display: flex;
+      gap: 30px;
+      .contacts__block {
+        display: flex;
+        position: relative;
+        .contacts__sprite {
+          position: absolute;
+          top: 32px;
+          left: 20px;
+        }
+        .contacts__input {
+          height: 50px;
+          width: 260px;
+
+          font-family: "Inter-Medium", sans-serif;
+          font-size: 14px;
+          line-height: 40px;
+
+          background: #f8f8f8;
+          color: #686868;
+
+          padding-left: 52px;
+          margin: 15px 0px;
+          border-radius: 30px;
+          outline: none;
+        }
+        .contacts__input--normal {
+          border: 2px solid rgba(255, 255, 255, 0);
+        }
+        .contacts__input--error {
+          border: 2px solid red;
+        }
+
+        .contacts__input:focus {
+          color: #1e2123;
+          background: #ffffff;
+          border: 2px solid rgba(102, 78, 249, 0.8);
+        }
+        .contacts__input:focus + .contacts__sprite {
+          svg {
+            fill: rgba(102, 78, 249, 0.8);
+          }
+        }
+      }
+    }
+    .contacts__text {
+      height: 200px;
+      width: 548px;
+
+      @extend %font;
+
+      outline-color: rgba(102, 78, 249, 0.8);
+      color: #686868;
+
+      padding: 15px 20px;
+      background: #f8f8f8;
+      border-radius: 30px;
+      border: none;
+      resize: none;
+    }
+    .contacts__text--normal {
+      border: 2px solid rgba(255, 255, 255, 0);
+    }
+    .contacts__text--error {
+      border: 2px solid red;
+    }
+
+    .contacts__send {
+      height: 48px;
+      width: 200px;
+
+      font-family: "Inter-Bold", sans-serif;
+      font-size: 16px;
+      color: #ffffff;
+
+      background: #664ef9;
+      border-radius: 33px;
+      border: none;
+
+      padding: 12px 20px;
+      margin: 40px 0px;
+    }
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 310px;
+    width: 400px;
+
+    background: #fffefe;
+    box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    .modal__title {
+      font-family: "Inter-Bold";
+      font-size: 25px;
+      text-align: center;
+
+      width: 200px;
+      color: #000000;
+      margin-top: 50px;
+    }
+    .modal__text {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+      text-align: center;
+
+      height: 50px;
+      width: 310px;
+
+      color: #686868;
+      margin-top: 20px;
+    }
+    .modal__button {
+      font-family: "Inter-Bold";
+      font-size: 16px;
+      color: #1e2123;
+
+      height: 48px;
+      width: 161px;
+
+      border-radius: 33px;
+      background: #ffd54f;
+      border: none;
+      margin-top: 30px;
+    }
+  }
+
+  .combine {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-left: 20px;
+    .combine__icons {
+      @extend %icons;
+
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+
+%font-call {
+  font-family: "Inter-Medium";
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+%font {
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 14px;
+}
+
+%icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}

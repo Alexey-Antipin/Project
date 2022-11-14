@@ -23,7 +23,7 @@
       margin-right: 40px;
       margin-bottom: 10px;
     }
-    
+
     .news__network {
       display: flex;
       justify-content: space-between;
@@ -31,7 +31,7 @@
       width: 100%;
     }
     .news__date {
-      font-family: "Inter-Medium";
+      font-family: "Inter-Medium", sans-serif;
       font-size: 14px;
 
       padding: 10px 16px;
@@ -45,7 +45,7 @@
       display: flex;
       align-items: center;
       .news__label {
-        font-family: "Inter-Regular";
+        font-family: "Inter-Regular", sans-serif;
         font-size: 14px;
       }
       .news__list {
@@ -95,7 +95,7 @@
       height: 540px;
       width: 844px;
 
-      font-family: "Inter-Regular";
+      font-family: "Inter-Regular", sans-serif;
       font-size: 16px;
     }
   }
@@ -114,7 +114,7 @@
       margin: 0 auto;
     }
     .news__main-title {
-      font-family: "Inter-Bold";
+      font-family: "Inter-Bold", sans-serif;
       font-size: 25px;
 
       padding-top: 62px;

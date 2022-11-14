@@ -45,7 +45,7 @@
   }
 
   .navbar__text--font {
-    font-family: "Inter-Medium";
+    font-family: "Inter-Medium",sans-serif;
   }
   .navbar__text--active {
     color: #1e2123;
@@ -96,7 +96,7 @@
           justify-content: center;
           align-items: center;
 
-          font-family: "Inter-SemiBold";
+          font-family: "Inter-SemiBold",sans-serif;
           font-size: 14px;
 
           position: relative;
@@ -121,7 +121,7 @@
     }
 
     .navigation__button {
-      font-family: "Inter-Bold";
+      font-family: "Inter-Bold",sans-serif;
       font-size: 14px;
 
       height: 40px;
