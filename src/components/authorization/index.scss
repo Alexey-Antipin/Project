@@ -1,0 +1,112 @@
+.authorization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 14%;
+  left: 36%;
+
+  height: 536px;
+  width: 406px;
+
+  background: #fffefe;
+  padding: 50px 50px;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+  .authorization__title {
+    font-family: "Inter-Bold";
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  .authorization__paragraph {
+    @extend %text;
+    padding: 0 40px;
+    margin-bottom: 35px;
+  }
+  .authorization__login {
+    @extend %input;
+    background: #f7f7f7;
+    margin-bottom: 20px;
+  }
+  .authorization__password {
+    @extend %input;
+    background: #f7f7f7;
+    margin-bottom: 20px;
+  }
+  .authorization__control {
+    display: flex;
+    margin-bottom: 38px;
+    .authorization__switch {
+      height: 20px;
+      width: 34px;
+
+      background: #bdbdbd;
+      border-radius: 100px;
+      border: none;
+      margin-right: 8px;
+      .authorization__round {
+        height: 14px;
+        width: 14px;
+
+        background: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        margin: 3px;
+      }
+    }
+    .authorization__remember {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+      color: #686868;
+    }
+    .authorization__forgot {
+      @extend %text-violet;
+      margin-left: 36px;
+    }
+  }
+  .authorization__entrance {
+    @extend %input;
+    background: #ffd54f;
+    border: none;
+    margin-bottom: 50px;
+  }
+  .authorization__account {
+    @extend %text;
+    .authorization__create-account {
+      @extend %text-violet;
+      padding-left: 10px;
+    }
+  }
+}
+
+%input {
+  height: 50px;
+  width: 306px;
+
+  font-family: "Inter-Bold";
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+}
+
+%text {
+  height: 34px;
+  width: 310px;
+
+  font-family: "Inter-Regular";
+  font-size: 14px;
+
+  text-align: center;
+  color: #686868;
+}
+
+%text-violet {
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #664ef9;
+}
