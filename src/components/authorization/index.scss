@@ -1,0 +1,231 @@
+.wrapper {
+  background: url("../../image/background.png"),
+    linear-gradient(#7e6af3, #6540cd);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+  max-width: 1940px;
+  width: 100%;
+}
+
+.authorization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 14%;
+  left: 36%;
+
+  height: 536px;
+  width: 406px;
+
+  background: #fffefe;
+  padding: 50px 50px;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+  .authorization__title {
+    font-family: "Inter-Bold";
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  .authorization__paragraph {
+    @extend %text;
+    padding: 0 40px;
+    margin-bottom: 35px;
+  }
+
+  .authorization__form {
+    position: relative;
+  }
+
+  //Login-->//
+  .authorization__login {
+    @extend %input;
+    background: #f7f7f7;
+    padding-left: 55px;
+    margin-bottom: 20px;
+    border: none;
+  }
+  .authorization__login:focus {
+    background: #ffffff;
+    outline: 2px solid #4e64f9cc;
+  }
+  .authorization__login:focus::placeholder {
+    color: #1e2123;
+  }
+  .authorization__login:focus + .authorization__icons-login {
+    svg {
+      fill: #664ef9;
+    }
+  }
+  .authorization__icons-login {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+  //<--Login.//
+
+  //Password-->//
+  .authorization__password {
+    @extend %input;
+    background: #f7f7f7;
+    padding-left: 55px;
+    margin-bottom: 20px;
+    border: none;
+  }
+  .authorization__password:focus {
+    background: #ffffff;
+    outline: 2px solid #4e64f9cc;
+  }
+  .authorization__password:focus::placeholder {
+    color: #1e2123;
+  }
+  .authorization__password:focus + .authorization__icons-password {
+    svg {
+      fill: #664ef9;
+    }
+  }
+  .authorization__icons-password {
+    position: absolute;
+    top: 85px;
+    left: 20px;
+  }
+  //<--Password.//
+
+  .authorization__control {
+    display: flex;
+    margin-bottom: 38px;
+    .authorization__switch {
+      height: 20px;
+      width: 34px;
+
+      border-radius: 100px;
+      border: none;
+      margin-right: 8px;
+      transition: 0.5s;
+      .authorization__round {
+        height: 14px;
+        width: 14px;
+
+        background: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        margin: 3px;
+        transition: 0.5s;
+      }
+      .authorization__round-on {
+        margin-left: 16px;
+      }
+    }
+    .authorization__switch-on {
+      background: #664ef9;
+    }
+    .authorization__switch-off {
+      background: #bdbdbd;
+    }
+    .authorization__remember {
+      font-family: "Inter-Regular";
+      font-size: 14px;
+      color: #686868;
+    }
+    .authorization__forgot {
+      @extend %text-violet;
+      margin-left: 36px;
+    }
+  }
+  .authorization__entrance {
+    height: 50px;
+    width: 306px;
+
+    font-family: "Inter-Bold";
+    font-size: 16px;
+
+    background: #ffd54f;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 50px;
+  }
+  .authorization__account {
+    @extend %text;
+    .authorization__create-account {
+      @extend %text-violet;
+      padding-left: 10px;
+    }
+  }
+}
+
+.formik-focus {
+  @extend %input;
+  background: #f7f7f7;
+  padding-left: 55px;
+  margin-bottom: 20px;
+  border: 2px solid lightcoral;
+}
+
+.formik-button {
+  height: 48px;
+  width: 306px;
+
+  font-family: "Inter-Bold";
+  font-size: 16px;
+
+  background: #eb5757;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+  border-radius: 33px;
+  border: none;
+}
+
+.formik-focus + .authorization__icons-login {
+  svg {
+    fill: lightcoral;
+  }
+}
+
+.formik-focus + .authorization__icons-password {
+  svg {
+    fill: lightcoral;
+  }
+}
+
+.formik-focus:focus {
+  outline: lightcoral;
+}
+.formik-focus::placeholder {
+  outline: lightcoral;
+  color: lightcoral;
+}
+
+%input {
+  height: 50px;
+  width: 306px;
+
+  font-family: "Inter-Medium";
+  font-size: 14px;
+
+  border-radius: 30px;
+}
+
+%text {
+  height: 34px;
+  width: 310px;
+
+  font-family: "Inter-Regular";
+  font-size: 14px;
+
+  text-align: center;
+  color: #686868;
+}
+
+%text-violet {
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #664ef9;
+}

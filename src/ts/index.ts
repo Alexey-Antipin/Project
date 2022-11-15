@@ -38,6 +38,18 @@ type PaginationProps = {
   page: string | number;
 };
 
+type SpriteProps = {
+  id: string;
+  colour?: string;
+  height?: string;
+  width?: string;
+};
+
+type Formik = {
+  email: string;
+  password: string;
+};
+
 export type {
   Head,
   Article,
@@ -45,4 +57,6 @@ export type {
   ListProps,
   LinkProps,
   PaginationProps,
+  SpriteProps,
+  Formik,
 };

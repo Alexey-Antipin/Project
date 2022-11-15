@@ -4,7 +4,7 @@ import logo from "../../image/logo.png";
 import { MassiveLink } from "../../ts";
 import "./index.scss";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const link: MassiveLink[] = [
     { id: 1, text: "Главная" },
     { id: 2, text: "Новости" },
