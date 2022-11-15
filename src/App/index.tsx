@@ -16,8 +16,8 @@ export const App = () => {
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
-      {/* <Contacts /> */}
-      <Authorization />
+      <Contacts />
+      {/* <Authorization /> */}
       {/* <Footer /> */}
     </div>
   );

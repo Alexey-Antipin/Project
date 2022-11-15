@@ -7,7 +7,7 @@ import { Sprite } from "../../svg";
 import { Article } from "../../ts";
 import "./index.scss";
 
-export const NewsDetailed = () => {
+export const NewsDetailed: React.FC = () => {
   const news = "Новости";
   const [value, setValue] = useState<string>("");
   const [page, setPage] = useState<string | number>(1);

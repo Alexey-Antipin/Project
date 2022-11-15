@@ -3,7 +3,7 @@ import { Sprite } from "../../svg";
 import { Head } from "../../ts";
 import "./index.scss";
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [textarea, setTextArea] = useState<string>("");
@@ -150,7 +150,7 @@ export const Contacts = () => {
                       <div className="contacts__sprite">
                         <Sprite
                           id={el.sprite}
-                          colour={empty && !el.hook ? "red" : "#bdb9b9"}
+                          colour={empty && !el.hook ? "lightcoral" : "#bdb9b9"}
                         />
                       </div>
                     </div>

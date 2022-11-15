@@ -1,5 +1,5 @@
 import "./index.scss";
 
-export const Home = () => {
+export const Home: React.FC = () => {
   return <div></div>;
 };

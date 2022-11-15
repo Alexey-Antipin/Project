@@ -2,7 +2,7 @@ import "./index.scss";
 import points from "../../image/points.png";
 import white_points from "../../image/white-points.png";
 import { Sprite } from "../../svg";
-export const Error = () => {
+export const Error: React.FC = () => {
   return (
     <div className="error">
       <div className="error__wrapper">
