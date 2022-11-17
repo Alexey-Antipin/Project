@@ -45,7 +45,14 @@ type SpriteProps = {
   width?: string;
 };
 
-type Formik = {
+type RegistrationOfFormik = {
+  login: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};
+
+type AuthorizationOfFormik = {
   email: string;
   password: string;
 };
@@ -58,5 +65,6 @@ export type {
   LinkProps,
   PaginationProps,
   SpriteProps,
-  Formik,
+  RegistrationOfFormik,
+  AuthorizationOfFormik,
 };

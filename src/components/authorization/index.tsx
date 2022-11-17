@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import { Sprite } from "../../svg";
-import { Formik } from "../../ts";
+import { AuthorizationOfFormik } from "../../ts";
 import * as Yup from "yup";
 import "./index.scss";
 
@@ -17,7 +17,7 @@ export const Authorization: React.FC = () => {
       password: Yup.string().required(),
       email: Yup.string().email().required(),
     }),
-    onSubmit: (values:Formik) => {
+    onSubmit: (values: AuthorizationOfFormik) => {
       alert(JSON.stringify(values, null, 2));
     },
   });

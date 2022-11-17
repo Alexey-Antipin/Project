@@ -5,6 +5,7 @@ import {
   News,
   NewsDetailed,
   Authorization,
+  Registration,
   Footer,
 } from "../components/index";
 import "./index.scss";
@@ -16,8 +17,9 @@ export const App = () => {
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
-      <Contacts />
+      {/* <Contacts /> */}
       {/* <Authorization /> */}
+      <Registration />
       {/* <Footer /> */}
     </div>
   );
