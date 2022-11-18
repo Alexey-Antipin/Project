@@ -3,7 +3,7 @@ import { Catalog } from "./catalog";
 import { Contacts } from "./contacts";
 import { Error } from "./error";
 import { Footer } from "./footer";
-import { Header } from "./header";
+import { Header } from "./header/Header";
 import { Home } from "./home";
 import { News } from "./news";
 import { NewsDetailed } from "./news-detailed";

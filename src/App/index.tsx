@@ -13,13 +13,13 @@ import "./index.scss";
 export const App = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
       {/* <Contacts /> */}
       {/* <Authorization /> */}
-      <Registration />
+      {/* <Registration /> */}
       {/* <Footer /> */}
     </div>
   );

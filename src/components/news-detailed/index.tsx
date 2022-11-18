@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { LinkNavigation } from "../../module/LinkNavigation";
-import { ListArticles } from "../../module/list";
+import { ListArticles } from "../../module/ListArticles";
 import { PaginationArticles } from "../../module/pagination";
 import { Sprite } from "../../svg";
 import { Article } from "../../ts";

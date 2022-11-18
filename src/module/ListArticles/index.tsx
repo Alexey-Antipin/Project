@@ -1,8 +1,8 @@
 import React from "react";
-import { ListProps } from "../../ts";
+import { ArticleProps } from "../../ts";
 import "./index.scss";
 
-export const ListArticles: React.FC<ListProps> = ({ list }) => {
+export const ListArticles: React.FC<ArticleProps> = ({ list }) => {
   return (
     <ul className="list__articles-list">
       {list.map((item, index) => {

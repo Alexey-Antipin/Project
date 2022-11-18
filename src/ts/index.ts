@@ -1,3 +1,31 @@
+type MassiveOfListProps = {
+  massive: MassiveOfList[];
+  classes?: MassiveOfClassesProps;
+  hook?: {
+    activeId: number;
+    setActiveId: (value: number) => void;
+  };
+};
+type MassiveOfClassesProps = {
+  classSprite?: string;
+  classUl?: string;
+  classParagraph?: string;
+  classColour?: string;
+  classList?: string;
+};
+type MassiveOfList = {
+  id: number;
+  text: string;
+  sprite?: string | number;
+  colour?: string;
+  underLine?: boolean;
+  characterSprite?: {
+    height?: string;
+    width?: string;
+    colour?: string;
+  };
+};
+
 type Head = {
   id: number;
   hook: string;
@@ -19,12 +47,7 @@ type Article = {
   description: string;
 };
 
-type MassiveLink = {
-  id: number;
-  text: string;
-};
-
-type ListProps = {
+type ArticleProps = {
   list: Article[];
 };
 
@@ -39,7 +62,7 @@ type PaginationProps = {
 };
 
 type SpriteProps = {
-  id: string;
+  id: string | number;
   colour?: string;
   height?: string;
   width?: string;
@@ -58,10 +81,11 @@ type AuthorizationOfFormik = {
 };
 
 export type {
+  MassiveOfList,
+  MassiveOfListProps,
   Head,
   Article,
-  MassiveLink,
-  ListProps,
+  ArticleProps,
   LinkProps,
   PaginationProps,
   SpriteProps,

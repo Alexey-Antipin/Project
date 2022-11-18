@@ -1,4 +1,4 @@
-import {SpriteProps} from "../ts";
+import { SpriteProps } from "../ts";
 
 export const Sprite = ({ id, colour, height, width }: SpriteProps) => {
   switch (id) {
