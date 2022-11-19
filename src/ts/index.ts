@@ -1,10 +1,12 @@
 type MassiveOfListProps = {
-  massive: MassiveOfList[];
+  massive?: MassiveOfList[];
   classes?: MassiveOfClassesProps;
   hook?: {
     activeId: number;
     setActiveId: (value: number) => void;
   };
+  usuallyList?: boolean;
+  usuallyArray?: string[];
 };
 type MassiveOfClassesProps = {
   classSprite?: string;
@@ -26,6 +28,20 @@ type MassiveOfList = {
   };
 };
 
+//Footer ==>
+type FooterOfArrayList = {
+  a: string[];
+  b: string[];
+  c: string[];
+  d: string[];
+};
+
+type FooterOfLink = {
+  name: string;
+  href: string;
+};
+//Footer <==
+
 type Head = {
   id: number;
   hook: string;
@@ -38,6 +54,7 @@ type Head = {
   error: string;
 };
 
+//Article ==>
 type Article = {
   id: number;
   title: string;
@@ -50,6 +67,7 @@ type Article = {
 type ArticleProps = {
   list: Article[];
 };
+//Article <==
 
 type LinkProps = {
   link: string;
@@ -83,6 +101,8 @@ type AuthorizationOfFormik = {
 export type {
   MassiveOfList,
   MassiveOfListProps,
+  FooterOfLink,
+  FooterOfArrayList,
   Head,
   Article,
   ArticleProps,

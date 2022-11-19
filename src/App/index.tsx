@@ -13,14 +13,14 @@ import "./index.scss";
 export const App = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
       {/* <Contacts /> */}
       {/* <Authorization /> */}
       {/* <Registration /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
