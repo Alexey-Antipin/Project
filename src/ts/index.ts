@@ -1,13 +1,43 @@
-type Head = {
+type MassiveOfListProps = {
+  massive?: MassiveOfList[];
+  classes?: MassiveOfClassesProps;
+  hook?: {
+    activeId: number;
+    setActiveId: (value: number) => void;
+  };
+  usuallyList?: boolean;
+  usuallyArray?: string[];
+};
+type MassiveOfClassesProps = {
+  classSprite?: string;
+  classUl?: string;
+  classParagraph?: string;
+  classColour?: string;
+  classList?: string;
+};
+type MassiveOfList = {
   id: number;
-  hook: string;
-  state: (value: string) => void;
-  title: string;
-  placeholder: string;
-  sprite: string;
-  class: string;
-  normal: string;
-  error: string;
+  text: string;
+  sprite?: string | number;
+  colour?: string;
+  underLine?: boolean;
+  characterSprite?: {
+    height?: string;
+    width?: string;
+    colour?: string;
+  };
+};
+
+type FooterOfArrayList = {
+  a: string[];
+  b: string[];
+  c: string[];
+  d: string[];
+};
+
+type Network = {
+  name: string;
+  href: string;
 };
 
 type Article = {
@@ -19,12 +49,7 @@ type Article = {
   description: string;
 };
 
-type MassiveLink = {
-  id: number;
-  text: string;
-};
-
-type ListProps = {
+type ArticleProps = {
   list: Article[];
 };
 
@@ -39,24 +64,49 @@ type PaginationProps = {
 };
 
 type SpriteProps = {
-  id: string;
+  id: string | number;
   colour?: string;
   height?: string;
   width?: string;
 };
 
-type Formik = {
+type ContactsOfField = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type Icon = {
+  name: string;
+  colour: string;
+  width: string;
+  height: string;
+};
+
+type RegistrationOfFormik = {
+  login: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};
+
+type AuthorizationOfFormik = {
   email: string;
   password: string;
 };
 
 export type {
-  Head,
+  MassiveOfList,
+  MassiveOfListProps,
+  Network,
+  FooterOfArrayList,
   Article,
-  MassiveLink,
-  ListProps,
+  ArticleProps,
   LinkProps,
   PaginationProps,
   SpriteProps,
-  Formik,
+  ContactsOfField,
+  Icon,
+  RegistrationOfFormik,
+  AuthorizationOfFormik,
 };

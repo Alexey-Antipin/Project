@@ -5,20 +5,22 @@ import {
   News,
   NewsDetailed,
   Authorization,
+  Registration,
   Footer,
-} from "../components/index";
+} from "../components";
 import "./index.scss";
 
 export const App = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
       <Contacts />
       {/* <Authorization /> */}
-      {/* <Footer /> */}
+      {/* <Registration /> */}
+      <Footer />
     </div>
   );
 };

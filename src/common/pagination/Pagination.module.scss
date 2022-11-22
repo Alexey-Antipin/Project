@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-bottom: 102px;
+}
+.list {
+  display: flex;
+  height: 22px;
+  width: 9px;
+}
+.item {
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 18px;
+  color: #686868;
+  padding: 0px 7px;
+  margin: 0px 8px;
+}
+.item-active {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 18px;
+
+  border-bottom: 2px solid #ffd54f;
+  color: #000000;
+}
