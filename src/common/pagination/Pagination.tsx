@@ -1,6 +1,7 @@
+import clsx from "clsx";
 import React, { useState, useEffect } from "react";
 import { PaginationProps } from "../../ts";
-import "./index.scss";
+import styles from "./Pagination.module.scss";
 
 export const PaginationArticles: React.FC<PaginationProps> = ({
   setPage,
@@ -32,16 +33,16 @@ export const PaginationArticles: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className="pagination">
-      <div className="pagination__wrapper">
-        <ul className="pagination__list">
+    <div>
+      <div className={styles.wrapper}>
+        <ul className={styles.list}>
           {allPages.map((el, index) => {
             return (
               <li
-                className={
-                  "pagination__item " +
-                  (el === page ? "pagination__item--active" : "")
-                }
+                className={clsx(
+                  styles.item,
+                  el === page ? styles["item-active"] : ""
+                )}
                 onClick={() => handleclick(index)}
                 key={index}>
                 {el}

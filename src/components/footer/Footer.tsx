@@ -1,6 +1,6 @@
 import { Sprite } from "../../svg";
 import logo from "../../image/logo.png";
-import { FooterOfArrayList, FooterOfLink } from "../../ts";
+import { FooterOfArrayList, Network } from "../../ts";
 import {
   belcard,
   byvisa,
@@ -13,7 +13,7 @@ import styles from "./Footer.module.scss";
 import { List } from "../../common/List/List";
 
 export const Footer: React.FC = () => {
-  const socialNetwork: FooterOfLink[] = [
+  const socialNetwork: Network[] = [
     { name: "instagram", href: "https://www.instagram.com/" },
     { name: "vk", href: "https://vk.com/" },
     { name: "facebook", href: "https://ru-ru.facebook.com/" },

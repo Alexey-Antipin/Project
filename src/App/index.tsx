@@ -7,17 +7,17 @@ import {
   Authorization,
   Registration,
   Footer,
-} from "../components/index";
+} from "../components";
 import "./index.scss";
 
 export const App = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {/* <News /> */}
       {/* <NewsDetailed/> */}
       {/* <Error /> */}
-      {/* <Contacts /> */}
+      <Contacts />
       {/* <Authorization /> */}
       {/* <Registration /> */}
       <Footer />

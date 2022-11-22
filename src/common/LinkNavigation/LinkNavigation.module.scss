@@ -1,0 +1,28 @@
+.link {
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 14px;
+}
+.home {
+  margin-right: 7px;
+}
+.title {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 30px;
+  margin-top: 25px;
+}
+.round {
+  display: inline-block;
+  height: 3px;
+  width: 3px;
+
+  border-radius: 50%;
+  background: #4e64f9;
+  margin: 3px 7px;
+}
+.text {
+  color: #686868;
+}
+.text-blue {
+  margin-left: 10px;
+  color: #4e64f9;
+}

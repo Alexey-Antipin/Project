@@ -1,23 +1,23 @@
-import { Authorization } from "./authorization";
-import { Catalog } from "./catalog";
-import { Contacts } from "./contacts";
-import { Error } from "./error";
-import { Footer } from "./footer/Footer";
-import { Header } from "./header/Header";
 import { Home } from "./home";
 import { News } from "./news";
+import { Error } from "./error";
+import { Catalog } from "./catalog";
+import { Contacts } from "./contacts";
+import { Authorization } from "./authorization";
 import { NewsDetailed } from "./news-detailed";
 import { Registration } from "./registration";
+import { Header } from "./header";
+import { Footer } from "./footer";
 
 export {
-  Authorization,
-  Catalog,
-  Contacts,
-  Error,
-  Footer,
-  Header,
   Home,
   News,
+  Error,
+  Catalog,
+  Contacts,
+  Authorization,
   NewsDetailed,
   Registration,
+  Header,
+  Footer,
 };

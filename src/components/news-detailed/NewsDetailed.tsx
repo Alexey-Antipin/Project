@@ -1,11 +1,13 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { LinkNavigation } from "../../module/LinkNavigation";
-import { ListArticles } from "../../module/ListArticles";
-import { PaginationArticles } from "../../module/pagination";
+import axios from "axios";
+import {
+  LinkNavigation,
+  ListArticles,
+  PaginationArticles,
+} from "../../common";
 import { Sprite } from "../../svg";
 import { Article } from "../../ts";
-import "./index.scss";
+import styles from "./NewsDetailed.module.scss";
 
 export const NewsDetailed: React.FC = () => {
   const news = "Новости";
@@ -35,27 +37,24 @@ export const NewsDetailed: React.FC = () => {
 
   return (
     <div className="NewsDetailed">
-      <div className="NewsDetailed__wrapper">
-        <div className="NewsDetailed__container">
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
           <LinkNavigation link={news} />
         </div>
-        <div className="NewsDetailed__container-list">
+        <div className={styles["container-list"]}>
           <ListArticles list={filterList} />
         </div>
-        <PaginationArticles
-          setPage={setPage}
-          page={page}
-        />
-        <div className="NewsDetailed__background">
-          <div className="NewsDetailed__block">
+        <PaginationArticles setPage={setPage} page={page} />
+        <div className={styles.background}>
+          <div className={styles.block}>
             <input
-              className="NewsDetailed__search"
+              className={styles.search}
               placeholder="Поиск по статьям"
               onChange={(event) => setValue(event.target.value)}
               value={value}
             />
             <button
-              className="NewsDetailed__button"
+              className={styles.button}
               onClick={() => searchArticle()}>
               <Sprite id="search" />
             </button>

@@ -28,7 +28,6 @@ type MassiveOfList = {
   };
 };
 
-//Footer ==>
 type FooterOfArrayList = {
   a: string[];
   b: string[];
@@ -36,25 +35,11 @@ type FooterOfArrayList = {
   d: string[];
 };
 
-type FooterOfLink = {
+type Network = {
   name: string;
   href: string;
 };
-//Footer <==
 
-type Head = {
-  id: number;
-  hook: string;
-  state: (value: string) => void;
-  title: string;
-  placeholder: string;
-  sprite: string;
-  class: string;
-  normal: string;
-  error: string;
-};
-
-//Article ==>
 type Article = {
   id: number;
   title: string;
@@ -67,7 +52,6 @@ type Article = {
 type ArticleProps = {
   list: Article[];
 };
-//Article <==
 
 type LinkProps = {
   link: string;
@@ -86,6 +70,19 @@ type SpriteProps = {
   width?: string;
 };
 
+type ContactsOfField = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type Icon = {
+  name: string;
+  colour: string;
+  width: string;
+  height: string;
+};
+
 type RegistrationOfFormik = {
   login: string;
   email: string;
@@ -101,14 +98,15 @@ type AuthorizationOfFormik = {
 export type {
   MassiveOfList,
   MassiveOfListProps,
-  FooterOfLink,
+  Network,
   FooterOfArrayList,
-  Head,
   Article,
   ArticleProps,
   LinkProps,
   PaginationProps,
   SpriteProps,
+  ContactsOfField,
+  Icon,
   RegistrationOfFormik,
   AuthorizationOfFormik,
 };
